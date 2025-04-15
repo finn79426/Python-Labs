@@ -1,0 +1,10 @@
+[project]
+name = "hello-world-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "deprecated>=1.2.18",
+    "pytest-aio>=1.9.0",
+]
