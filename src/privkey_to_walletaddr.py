@@ -1,3 +1,4 @@
+import argparse
 from hashlib import sha256
 
 import base58
@@ -5,12 +6,17 @@ from eth_keys import keys
 from eth_utils import keccak
 from eth_utils.address import to_checksum_address
 
-# uv run src/privkey_to_walletaddr.py
+# uv run src/privkey_to_walletaddr.py b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291
 
-# private key is case-insensitive
-PRIVATE_KEY_HEX = (
-    "b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291"  # gitleaks:allow
-)
+# ---------------------------------------------------------------------------------
+
+parser = argparse.ArgumentParser(description="Convert private key to wallet address")
+parser.add_argument("private_key_hex", help="Private key in hex format")
+args = parser.parse_args()
+
+# ---------------------------------------------------------------------------------
+
+PRIVATE_KEY_HEX = args.private_key_hex
 
 # ---------------------------------------------------------------------------------
 
