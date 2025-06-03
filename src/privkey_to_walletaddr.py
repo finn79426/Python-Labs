@@ -6,8 +6,6 @@ from eth_keys import keys
 from eth_utils import keccak
 from eth_utils.address import to_checksum_address
 
-# uv run src/privkey_to_walletaddr.py b71c71a67e1177ad4e901695e1b4b9ee17ae16c6668d313eac2f96dbcda3f291
-
 # ---------------------------------------------------------------------------------
 
 parser = argparse.ArgumentParser(description="Convert private key to wallet address")
@@ -25,9 +23,9 @@ if PRIVATE_KEY_HEX.startswith("0x"):
     PRIVATE_KEY_HEX = PRIVATE_KEY_HEX[2:]
 
 # Check if the length of the hex string is valid
-assert (
-    len(PRIVATE_KEY_HEX) == 64
-), "Invalid private key length. Must be 64 hex characters."
+assert len(PRIVATE_KEY_HEX) == 64, (
+    "Invalid private key length. Must be 64 hex characters."
+)
 
 # Convert the hex string to bytes
 private_key_bytes = bytes.fromhex(PRIVATE_KEY_HEX)

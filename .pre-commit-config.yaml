@@ -16,18 +16,14 @@ repos:
       - id: pretty-format-json
         args: ["--autofix", "--indent", "4"]
 
-  - repo: https://github.com/pycqa/isort
-    rev: 6.0.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.8
     hooks:
-      - id: isort
-        args: ["--profile", "black"]
-
-  - repo: https://github.com/psf/black
-    rev: 25.1.0
-    hooks:
-      - id: black
+      - id: ruff
+        args: [ --fix ]
+      - id: ruff-format
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.16.1
+    rev: v8.25.1
     hooks:
       - id: gitleaks
