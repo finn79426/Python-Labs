@@ -8,13 +8,13 @@ Just another repo stored bunch of my shitty code.
 
 ```shell=
 uv run src/2fa_otp_generate.py <2FA_SECRET>
-> 2FA Secret Key: <2FA_SECRET>
+> 🔑 2FA Secret Key: <2FA_SECRET>
 > 2FA OTP Code: 807318
 
 # Or by setting a env variable
 export TWO_FA_SECRET='<2FA_SECRET>'
 uv run src/2fa_otp_generate.py
-> 2FA Secret Key: <2FA_SECRET>
+> 🔑 2FA Secret Key: <2FA_SECRET>
 > 2FA OTP Code: 807318
 ```
 

@@ -54,5 +54,5 @@ otp = str(code % (10**6)).zfill(6)
 
 # ---------------------------------------------------------------------------------
 
-print("2FA Secret Key:", TWO_FA_SECRET_KEY)
+print("🔑 2FA Secret Key:", TWO_FA_SECRET_KEY)
 print("2FA OTP Code:", otp)
