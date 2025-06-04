@@ -24,7 +24,7 @@ if PRIVATE_KEY_HEX.startswith("0x"):
 
 # Check if the length of the hex string is valid
 assert len(PRIVATE_KEY_HEX) == 64, (
-    "Invalid private key length. Must be 64 hex characters."
+    "Invalid private key length. Must be 64 hexadecimal characters."
 )
 
 # Convert the hex string to bytes
